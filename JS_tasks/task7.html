@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TASK 7</title>
+    <style>
+      #train-container {
+        position: relative;
+        width: 100%;
+        height: 150px;
+      }
+      #train {
+        position: absolute;
+        left: 0;
+        top: 50px;
+        width: 100px;
+      }
+      body {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="train-container">
+      <img id="train" src="train.jpg" alt="Train" />
+    </div>
+    <h3 style="color: navy">Click the following buttons to handle animation</h3>
+    <button onclick="startTrain()">Start</button>
+    <button onclick="stopTrain()">Stop</button>
+  </body>
+  <script>
+    var train = document.getElementById("train");
+    var intervalID;
+    var speed = 2;
+    function startTrain() {
+      if (!intervalID) {
+        intervalID = setInterval(function () {
+          trainpos = train.offsetLeft + speed;
+          if (trainpos > window.innerWidth) {
+            trainpos = -train.offsetLeft;
+          }
+          train.style.left = trainpos + "px";
+        }, 5);
+      }
+    }
+    function stopTrain() {
+      clearInterval(intervalID);
+      intervalID = null;
+    }
+  </script>
+</html>

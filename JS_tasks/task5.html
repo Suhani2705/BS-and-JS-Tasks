@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TASK 5</title>
+    <style>
+      form {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        gap: 10px 20px;
+        width: 400px;
+        margin: auto;
+      }
+      label {
+        grid-column: 1 / 2;
+        align-self: center;
+      }
+      input,
+      textarea {
+        grid-column: 2 / 3;
+        width: 100%;
+        padding: 5px;
+      }
+      span {
+        grid-column: 2 / 3;
+        color: red;
+        font-size: 12px;
+      }
+      button {
+        grid-column: 1 / 3;
+        justify-self: start;
+        padding: 5px 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <label for="Name">Name:</label>
+      <input type="text" id="Name" />
+      <span id="nameerror"></span>
+
+      <label for="mail">Email:</label>
+      <input type="email" id="mail" />
+      <span id="mailerror"></span>
+
+      <label for="Website">Website:</label>
+      <input type="url" id="Website" />
+      <span id="websiteerror"></span>
+
+      <label for="Message">Message:</label>
+      <textarea id="Message" rows="5"></textarea>
+      <span id="Messageerror"></span>
+
+      <button type="button" onclick="validate()">Submit</button>
+    </form>
+    <script>
+      function validate() {
+        let validity = true;
+        document.getElementById("nameerror").innerHTML = "";
+        document.getElementById("mailerror").innerHTML = "";
+        document.getElementById("websiteerror").innerHTML = "";
+        document.getElementById("Messageerror").innerHTML = "";
+
+        if (!document.getElementById("Name").value) {
+          document.getElementById("nameerror").innerHTML =
+            "This field is required";
+          document.getElementById("Name").style.borderColor = "red";
+          validity = false;
+        } else {
+          document.getElementById("nameerror").innerHTML = "";
+          document.getElementById("Name").style.borderColor = "";
+        }
+
+        const emailField = document.getElementById("mail");
+        if (!emailField.value || !emailField.checkValidity()) {
+          document.getElementById("mailerror").innerHTML =
+            "A valid email address is required.";
+          document.getElementById("mail").style.borderColor = "red";
+          validity = false;
+        } else {
+          document.getElementById("mailerror").innerHTML = "";
+          document.getElementById("mail").style.borderColor = "";
+        }
+
+        const urlField = document.getElementById("Website");
+        if (!urlField.value || !urlField.checkValidity()) {
+          document.getElementById("websiteerror").innerHTML =
+            "A valid URL is required.";
+          document.getElementById("Website").style.borderColor = "red";
+          validity = false;
+        } else {
+          document.getElementById("websiteerror").innerHTML = "";
+          document.getElementById("Website").style.borderColor = "";
+        }
+
+        if (!document.getElementById("Message").value) {
+          document.getElementById("Messageerror").innerHTML =
+            "This field is required";
+          document.getElementById("Message").style.borderColor = "red";
+          validity = false;
+        } else {
+          document.getElementById("Messageerror").innerHTML = "";
+          document.getElementById("Message").style.borderColor = "";
+        }
+
+        if (validity) {
+          alert("Form submitted");
+        }
+      }
+    </script>
+  </body>
+</html>

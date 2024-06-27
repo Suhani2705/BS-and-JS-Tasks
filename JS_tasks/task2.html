@@ -1,0 +1,18 @@
+<html>
+  <title>TASK 2</title>
+  <body>
+    <label>Enter a string</label>
+    <input type="text" id="str" /><br />
+    <button onclick="reverse()">Enter</button>
+    <p id="ans">Click this button to reverse the string.</p>
+  </body>
+  <script>
+    function reverse() {
+      var x = document.getElementById("str").value;
+      var arr = x.split("");
+      var revarr = arr.reverse();
+      var revstr = revarr.join("");
+      document.getElementById("ans").innerHTML = revstr;
+    }
+  </script>
+</html>

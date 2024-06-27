@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Builderz</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .header {
+        background-color: #f1c40f;
+        color: white;
+        padding: 10px 0;
+      }
+      .navbar-custom {
+        background-color: #041025;
+        position: relative;
+      }
+      .navbar-custom .navbar-nav .nav-link {
+        color: white;
+      }
+      .navbar-left-bg,
+      .navbar-right-bg {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        z-index: 0;
+      }
+      .navbar-left-bg {
+        background-color: #f1c40f;
+        width: 10%;
+        left: 0;
+      }
+      .navbar-right-bg {
+        background-color: #f1c40f;
+        width: 9%;
+        right: 0;
+      }
+      .navbar-custom .container {
+        position: relative;
+        z-index: 1;
+      }
+      .hero-section {
+        position: relative;
+        text-align: center;
+        color: white;
+        background-image: url("https://assets-news.housing.com/news/wp-content/uploads/2022/08/09102001/Labour-shortage-in-Indian-real-estate-Reasons-for-it-and-possible-solutions-FB-1200x700-compressed.jpg");
+        background-size: cover;
+        height: 500px;
+      }
+
+      .hero-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .features {
+        background-color: #041025;
+        color: white;
+        padding: 0;
+      }
+      .feature-item {
+        background-color: #f1c40f;
+        padding: 20px;
+        border-radius: 0;
+        text-align: center;
+        margin: 0;
+      }
+      .row.no-gutters {
+        margin: 0;
+        width: 100%;
+      }
+      .col-md-4 {
+        padding: 0;
+      }
+      #button {
+        border: 1px solid white;
+        color: white;
+        background-color: #041025;
+      }
+      #feature1 {
+        background-color: #041025;
+        color: #f5c052;
+      }
+      #feature3 {
+        background-color: #041025;
+        color: #f5c052;
+      }
+      #feature2 {
+        background-color: #f5c052;
+        color: #041025;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-md-3 text-md-left"
+            style="
+              font-size: 3rem;
+              font-family: 'Arial Black', sans-serif;
+              color: #041025;
+            "
+          >
+            Builderz
+          </div>
+          <div class="col-md-3 text-md-right">
+            Opening Hour: Mon - Fri, 10:00 - 18:00
+          </div>
+          <div class="col-md-3 text-md-right">Call Us: +002 010 232 475</div>
+          <div class="col-md-3 text-md-right">Email Us: info@example.com</div>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-left-bg"></div>
+      <div class="navbar-right-bg"></div>
+      <div class="container">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Service</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Team</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Project</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <button id="button">Get a Quote</button>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="hero-section">
+      <div class="hero-text">
+        <h1 class="display-4">We Are Professional</h1>
+        <p class="lead">For Your Dream Project</p>
+        <a href="#" class="btn btn-primary">Get A Quote</a>
+      </div>
+    </div>
+    <div class="features">
+      <div class="container-fluid">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <div class="feature-item" id="feature1">
+              <h3>Expert Worker</h3>
+              <p>
+                Lorem ipsum dolor sit amet elit. Phasellus nec pretium ornare
+                velit non.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="feature-item" id="feature2">
+              <h3>Quality Work</h3>
+              <p>
+                Lorem ipsum dolor sit amet elit. Phasellus nec pretium ornare
+                velit non.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="feature-item" id="feature3">
+              <h3>24/7 Support</h3>
+              <p>
+                Lorem ipsum dolor sit amet elit. Phasellus nec pretium ornare
+                velit non.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

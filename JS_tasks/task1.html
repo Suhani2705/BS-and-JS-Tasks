@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TASK 1</title>
+  </head>
+  <body>
+    <label>Enter a number:</label>
+    <input type="number" id="inp" placeholder="Enter only integer" /><br />
+
+    <button onclick="reverse()">Enter</button>
+    <p id="answer">
+      Click this button to get the reversed number as your output.
+    </p>
+
+    <script>
+      function reverse() {
+        var x = document.getElementById("inp").value;
+        var str = Math.abs(x).toString();
+        var array = str.split("");
+        var reversedArray = array.reverse();
+        var reversedString = reversedArray.join("");
+        var reversedNumber = parseInt(reversedString, 10);
+        document.getElementById("answer").innerHTML = reversedNumber;
+      }
+    </script>
+  </body>
+</html>
